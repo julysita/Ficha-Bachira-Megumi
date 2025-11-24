@@ -35,45 +35,8 @@
   z-index:-1;
 }
 
-/* ------------------ PANTALLA DE CONTRASEÑA ------------------ */
-#login{
-  width:100%;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  background:rgba(8,0,20,0.9);
-  position:fixed;
-  z-index:10;
-}
-
-#login input{
-  padding:12px 20px;
-  border:none;
-  border-radius:8px;
-  font-size:18px;
-  outline:none;
-  margin-bottom:10px;
-}
-
-#login button{
-  padding:10px 22px;
-  font-size:18px;
-  background:#8e00ff;
-  color:white;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  transition:0.3s;
-}
-#login button:hover{
-  background:#b100ff;
-}
-
 /* ------------------ CONTENIDO PRINCIPAL ------------------ */
 #content{
-  display:none;
   padding:40px 20px;
   color:#e5d4ff;
   text-shadow:0 0 10px #7a00f8;
@@ -115,11 +78,11 @@
 .columnas {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;                /* separación entre columnas */
-  justify-content: center;   /* centra todo el bloque horizontalmente */
+  gap: 50px;
+  justify-content: center;
   width: 100%;
   max-width: 1200px;
-  margin: 35px auto;         /* centra el contenedor en la página */
+  margin: 35px auto;
 }
 
 .card {
@@ -129,17 +92,16 @@
   border: 2px solid #a500ff;
   box-shadow: 0 0 25px #8e00ff;
   text-align: center;
-
-  flex: 0 0 45%;            /* cada card ocupa el 45% del ancho disponible */
-  min-width: 280px;          /* evita que se achiquen demasiado en móviles */
+  flex: 0 0 45%;
+  min-width: 280px;
 }
 
 .texto-respetar {
-  white-space: pre-wrap;     /* respeta saltos y espacios */
-  word-wrap: break-word;     /* evita que se salga del contenedor */
+  white-space: pre-wrap;
+  word-wrap: break-word;
   line-height: 1.4;
   font-family: "Courier New", monospace;
-  text-align: left;          /* texto alineado a la izquierda */
+  text-align: left;
   font-size: 13px;
 }
 
@@ -152,7 +114,6 @@
   margin-left:auto;
   margin-right:auto;
 }
-
 
 /* ------------------ BOTÓN DE AUDIO ------------------ */
 #audio-btn{
@@ -178,17 +139,14 @@
 
 <!-- 🔮 VIDEO DE FONDO -->
 <video id="video-bg" autoplay muted loop>
-  <source src="video.mp4"> 
-  <!-- PONÉ TU VIDEO LOCAL ACÁ -->
+  <source src="video.mp4">
 </video>
 
 <div id="overlay"></div>
 
-<!-- 🔒 PANTALLA CONTRASEÑA -->
-<div id="login">
-  <input type="password" id="pass" placeholder="Contraseña">
-  <button onclick="acceder()">Entrar</button>
-</div>
+<!-- 🔥 CONTENIDO DIRECTO (sin contraseña) -->
+<div id="content">
+
 
 <!-- 🎆 CONTENIDO PRINCIPAL -->
 <div id="content">
@@ -373,4 +331,5 @@ function toggleAudio(){
 
 </body>
 </html>
+
 
